@@ -4,7 +4,7 @@
       <div id="news" class="nuxt-content">
         <h2>News</h2>
         <ul>
-          <li v-for="(article, index) in data" :key="index">
+          <li v-for="(article, index) in news" :key="index">
             {{ article.date }}
             {{ article.title }}
             <a :href="article.link">
@@ -15,6 +15,21 @@
         </ul>
       </div>
     </article>
+
+    <article>
+      <div class="nuxt-content">
+        <h2 id="event">Event</h2>
+        <ul>
+          <li v-for="(event, index) in events" :key="index">
+            <a :href="event.link">
+              <img :src="event.thumb" alt="" />
+            </a>
+          </li>
+          <li><a href="/events">more...</a></li>
+        </ul>
+      </div>
+    </article>
+
     <article>
       <div id="message" class="nuxt-content">
         <ContentDoc path="message" />
@@ -29,14 +44,19 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("news", () =>
-  queryContent("/data")
-    .limit(10)
-    .sort({ eventDate: -1, date: -1 })
-    .where({ date: { $gt: new Date(2020) } })
-    .find()
-);
-//console.log(data)
+const news = await queryContent("/data")
+  .limit(10)
+  .sort({ eventDate: -1 })
+  .sort({ date: -1 })
+  .where({ date: { $gt: new Date(2020) } })
+  .find();
+
+const events = await queryContent("/data")
+  .limit(9)
+  .sort({ eventDate: -1 })
+  .where({ eventDate: { $gt: new Date(2020) } })
+  .find();
+console.log(news, events);
 </script>
 
 <style lang="scss" scoped>
