@@ -15,11 +15,13 @@
         </ul>
       </div>
     </article>
+
     <article>
       <div id="project" class="nuxt-content">
         <ContentDoc path="projects" />
       </div>
     </article>
+
     <article>
       <div class="nuxt-content">
         <h2 id="event">Event</h2>
@@ -39,11 +41,29 @@
         <ContentDoc path="message" />
       </div>
     </article>
+
     <article>
       <div id="vision" class="nuxt-content">
         <ContentDoc path="vision" />
       </div>
     </article>
+
+    <article>
+      <div class="nuxt-content">
+        <h2>Contact</h2>
+        <ul class="footer__list">
+          <li>
+            シビックテックさいたま世話人：太田一穂、クワハラシズカ、藤田史織
+          </li>
+          <li>email：civictech.saitama@gmail.com</li>
+          <li>
+            <a href="https://www.facebook.com/CivicTechSaitamaCity">
+              <img src="images/iconFb.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
   </div>
 </template>
 
