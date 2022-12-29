@@ -87,6 +87,7 @@ console.log(news, events);
 
 #mainImg-2 {
   display: flex;
+
   img {
     width: 50%;
   }
@@ -95,6 +96,7 @@ console.log(news, events);
 section {
   clear: both;
   padding-top: 40px;
+
   h2 span {
     background: #fff;
   }
@@ -103,10 +105,11 @@ section {
 .panel li a {
   text-decoration: none;
 }
+
 /**
  * Nuxt content
  */
-::v-deep .nuxt-content {
+:deep(.nuxt-content) {
   // width: 100%;
   max-width: 1000px;
   margin: auto;
@@ -121,30 +124,37 @@ section {
     text-align: center;
     background-size: 1px 1px;
   }
-  #event + ul,
-  #project + ul {
+
+  #event+ul,
+  #project+ul {
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+
     li {
       width: calc(100% / 3);
       margin: 0;
       padding: 3px 6px;
       box-sizing: border-box;
+
       a img {
         width: 100%;
       }
     }
   }
-  #contact + ul {
+
+  #contact+ul {
     list-style-type: none;
+
     img {
       width: 24px;
     }
   }
+
   .footer__list li {
     list-style-type: none;
+
     img {
       width: 24px;
     }
