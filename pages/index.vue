@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Swiper />
+
     <article>
       <div id="news" class="nuxt-content">
         <h2>News</h2>
@@ -68,6 +70,8 @@
 </template>
 
 <script setup>
+import Swiper from './-Swiper'
+
 const news = await queryContent("/data")
   .limit(10)
   .sort({ eventDate: -1 })
