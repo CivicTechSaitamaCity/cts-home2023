@@ -15,7 +15,11 @@
         </ul>
       </div>
     </article>
-
+    <article>
+      <div id="project" class="nuxt-content">
+        <ContentDoc path="projects" />
+      </div>
+    </article>
     <article>
       <div class="nuxt-content">
         <h2 id="event">Event</h2>
@@ -56,12 +60,10 @@ const events = await queryContent("/data")
   .sort({ eventDate: -1 })
   .where({ eventDate: { $gt: new Date(2020) } })
   .find();
-console.log(news, events);
 </script>
 
 <style lang="scss" scoped>
-/* ヘッダー
-------------------------------------------------------------*/
+/* ヘッダー */
 
 #mainnav a {
   color: #000;
