@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Swiper />
-
     <article>
       <div id="news" class="nuxt-content">
         <h2>News</h2>
@@ -13,55 +11,6 @@
               <span v-if="article.link">link</span>
             </a>
           </li>
-          <li><a href="/news">more...</a></li>
-        </ul>
-      </div>
-    </article>
-
-    <article>
-      <div id="project" class="nuxt-content">
-        <ContentDoc path="projects" />
-      </div>
-    </article>
-
-    <article>
-      <div class="nuxt-content">
-        <h2 id="event">Event</h2>
-        <ul>
-          <li v-for="(event, index) in events" :key="index">
-            <a :href="event.link">
-              <img :src="event.thumb" alt="" />
-            </a>
-          </li>
-          <li><a href="/events">more...</a></li>
-        </ul>
-      </div>
-    </article>
-
-    <article>
-      <div id="message" class="nuxt-content">
-        <ContentDoc path="message" />
-      </div>
-    </article>
-
-    <article>
-      <div id="vision" class="nuxt-content">
-        <ContentDoc path="vision" />
-      </div>
-    </article>
-
-    <article>
-      <div class="nuxt-content">
-        <h2>Contact</h2>
-        <ul class="footer__list">
-          <li>
-            シビックテックさいたま世話人：太田一穂、クワハラシズカ、藤田史織
-          </li>
-          <li>email：civictech.saitama@gmail.com</li>
-          <li>
-            <a href="https://www.facebook.com/CivicTechSaitamaCity">
-              <img src="/images/iconFb.png" alt="" /></a>
-          </li>
         </ul>
       </div>
     </article>
@@ -70,19 +19,10 @@
 </template>
 
 <script setup>
-import Swiper from './-Swiper'
-
 const news = await queryContent("/data")
-  .limit(10)
   .sort({ eventDate: -1 })
   .sort({ date: -1 })
   .where({ date: { $gt: new Date(2020) } })
-  .find();
-
-const events = await queryContent("/data")
-  .limit(9)
-  .sort({ eventDate: -1 })
-  .where({ eventDate: { $gt: new Date(2020) } })
   .find();
 </script>
 

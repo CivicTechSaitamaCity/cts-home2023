@@ -8,7 +8,7 @@
           <img :src="item.img" alt="alt" />
         </swiper-slide>
 
-        <div slot="pagination" class="swiper-pagination" />
+        <div class="swiper-pagination" />
       </swiper>
     </client-only>
   </div>
