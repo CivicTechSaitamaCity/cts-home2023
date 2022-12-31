@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Swiper />
-
+    <TopSlider />
     <article>
       <div id="news" class="nuxt-content">
         <h2>News</h2>
@@ -13,8 +12,8 @@
               <span v-if="article.link">link</span>
             </a>
           </li>
-          <li><a href="/news">more...</a></li>
         </ul>
+        <span><a href="/news">more...</a></span>
       </div>
     </article>
 
@@ -33,8 +32,8 @@
               <img :src="event.thumb" alt="" />
             </a>
           </li>
-          <li><a href="/events">more...</a></li>
         </ul>
+        <span><a href="/events">more...</a></span>
       </div>
     </article>
 
@@ -70,7 +69,6 @@
 </template>
 
 <script setup>
-import Swiper from './-Swiper'
 
 const news = await queryContent("/data")
   .limit(10)

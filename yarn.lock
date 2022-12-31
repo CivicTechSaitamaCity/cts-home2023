@@ -539,7 +539,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0-rc.11", "@nuxt/kit@^3.0.0-rc.14", "@nuxt/kit@v3.0.0":
+"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0-rc.14", "@nuxt/kit@v3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0.tgz#ae49b4e27b15285556cb88f35a56309c5ca0dd79"
   integrity sha512-7ZsOLt5s9a0ZleAIzmoD70JwkZf5ti6bDdxl6f8ew7Huxz+ni/oRfTPTX9TrORXsgW5CvDt6Q9M7IJNPkAN/Iw==
@@ -3746,14 +3746,6 @@ nuxi@3.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-swiper@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/nuxt-swiper/-/nuxt-swiper-0.1.6.tgz#99ea2be95aa5c312ce6f3fd18d1c6e2b801ef106"
-  integrity sha512-S5jc11uyGfChVo7qbONWAE+9c7mpORSfzHx5HOMWVRzW4/sgzg93gX7skPIgY3bTMDzuwLtRftakRnUIS8miig==
-  dependencies:
-    "@nuxt/kit" "^3.0.0-rc.11"
-    swiper "^8.4.2"
-
 nuxt@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.0.0.tgz#0909e6566d79805f3a4ed6229573817cbde12e89"
@@ -4519,11 +4511,12 @@ rollup-plugin-terser@^7.0.2:
     terser "^5.0.0"
 
 rollup-plugin-visualizer@^5.8.3:
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-visualizer/-/rollup-plugin-visualizer-5.8.3.tgz#2f002d6e1e38f4d4fb8638fd8d23ec799c3a2060"
-  integrity sha512-QGJk4Bqe4AOat5AjipOh8esZH1nck5X2KFpf4VytUdSUuuuSwvIQZjMGgjcxe/zXexltqaXp5Vx1V3LmnQH15Q==
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-visualizer/-/rollup-plugin-visualizer-5.9.0.tgz#013ac54fb6a9d7c9019e7eb77eced673399e5a0b"
+  integrity sha512-bbDOv47+Bw4C/cgs0czZqfm8L82xOZssk4ayZjG40y9zbXclNk7YikrZTDao6p7+HDiGxrN0b65SgZiVm9k1Cg==
   dependencies:
     open "^8.4.0"
+    picomatch "^2.3.1"
     source-map "^0.7.4"
     yargs "^17.5.1"
 
@@ -4892,7 +4885,7 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-swiper@^8.4.2:
+swiper@^8.4.5:
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.4.5.tgz#149ca81f67393d3f33abddd0f968fc37e99980b5"
   integrity sha512-zveyEFBBv4q1sVkbJHnuH4xCtarKieavJ4SxP0QEHvdpPLJRuD7j/Xg38IVVLbp7Db6qrPsLUePvxohYx39Agw==
