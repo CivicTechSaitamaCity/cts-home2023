@@ -147,6 +147,10 @@ section {
     font-weight: normal;
     text-align: center;
     background-size: 1px 1px;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   #event+ul,
