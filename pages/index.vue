@@ -7,7 +7,7 @@
         <h2>News</h2>
         <ul>
           <li v-for="(article, index) in news" :key="index">
-            {{ article.date }}
+            {{ formatDate(article.date) }}
             {{ article.title }}
             <a :href="article.link">
               <span v-if="article.link">link</span>
