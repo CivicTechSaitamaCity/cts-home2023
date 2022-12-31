@@ -3,7 +3,7 @@
   <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :autoplay="{
   delay: 8000,
   disableOnInteraction: false,
-}" :loopAdditionalSlides="1" :modules="modules">
+}" effect="fade" :loopAdditionalSlides="1" :modules="modules">
     <swiper-slide v-for="item in items" :key="item.id">
       <img :src="item.img" alt="alt" />
     </swiper-slide>
@@ -11,10 +11,10 @@
 </template>
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 import "swiper/css";
 import 'swiper/css/effect-fade';
-const modules = [Autoplay];
+const modules = [Autoplay, EffectFade];
 
 const items = [
   { img: '/images/event230115seniorIdeathon.jpg' },
